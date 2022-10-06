@@ -1,0 +1,11 @@
+C:\Users\Togrul\source\repos\Calculator_Application\Calculator_Application\bin\Debug\Calculator_Application.exe.config
+C:\Users\Togrul\source\repos\Calculator_Application\Calculator_Application\bin\Debug\Calculator_Application.exe
+C:\Users\Togrul\source\repos\Calculator_Application\Calculator_Application\bin\Debug\Calculator_Application.pdb
+C:\Users\Togrul\source\repos\Calculator_Application\Calculator_Application\obj\Debug\Calculator_Application.csproj.AssemblyReference.cache
+C:\Users\Togrul\source\repos\Calculator_Application\Calculator_Application\obj\Debug\Calculator_Application.csproj.SuggestedBindingRedirects.cache
+C:\Users\Togrul\source\repos\Calculator_Application\Calculator_Application\obj\Debug\Calculator_Application.Calculator.resources
+C:\Users\Togrul\source\repos\Calculator_Application\Calculator_Application\obj\Debug\Calculator_Application.Properties.Resources.resources
+C:\Users\Togrul\source\repos\Calculator_Application\Calculator_Application\obj\Debug\Calculator_Application.csproj.GenerateResource.cache
+C:\Users\Togrul\source\repos\Calculator_Application\Calculator_Application\obj\Debug\Calculator_Application.csproj.CoreCompileInputs.cache
+C:\Users\Togrul\source\repos\Calculator_Application\Calculator_Application\obj\Debug\Calculator_Application.exe
+C:\Users\Togrul\source\repos\Calculator_Application\Calculator_Application\obj\Debug\Calculator_Application.pdb
