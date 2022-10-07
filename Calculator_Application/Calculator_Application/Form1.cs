@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,7 +40,7 @@ namespace Calculator_Application
 
         private void btn_minus_Click(object sender, EventArgs e)
         {
-           
+          
         }
 
         private void btn_multiply_Click(object sender, EventArgs e)
@@ -55,30 +55,37 @@ namespace Calculator_Application
 
         private void btn_equal_Click(object sender, EventArgs e)
         {
-            lbl_result.Text = "";
-            operandPerformed = true;
-
-            switch(operand)
+            try
             {
+                lbl_result.Text = "";
+                operandPerformed = true;
 
-                case "+":
-                    textBox1.Text = (result + Double.Parse(textBox1.Text)).ToString();
-                    break;
-                case "-":
-                    textBox1.Text = (result - Double.Parse(textBox1.Text)).ToString();
-                    break;
-                case "X":
-                    textBox1.Text = (result * Double.Parse(textBox1.Text)).ToString();
-                    break;
-                case "÷":
-                    textBox1.Text = (result / Double.Parse(textBox1.Text)).ToString();
-                    break;
-                default: break;
+                switch (operand)
+                {
+
+                    case "+":
+                        textBox1.Text = (result + Double.Parse(textBox1.Text)).ToString();
+                        break;
+                    case "-":
+                        textBox1.Text = (result - Double.Parse(textBox1.Text)).ToString();
+                        break;
+                    case "X":
+                        textBox1.Text = (result * Double.Parse(textBox1.Text)).ToString();
+                        break;
+                    case "÷":
+                        textBox1.Text = (result / Double.Parse(textBox1.Text)).ToString();
+                        break;
+                    default: break;
+                }
+                result = Double.Parse(textBox1.Text);
+                textBox1.Text = result.ToString();
+                result = 0;
+                operand = "";
             }
-            result = Double.Parse(textBox1.Text);
-            textBox1.Text = result.ToString();
-            result = 0;
-            operand = "";
+            catch
+            {
+                MessageBox.Show("Nan doesn't acceptable");
+            }
         }
 
         private void btn_point_Click(object sender, EventArgs e)
@@ -105,26 +112,37 @@ namespace Calculator_Application
 
         private void OperandEvent(object sender, EventArgs e)
         {
-            operandPerformed = true;
-            Button btn = (Button)sender;
-            string newOperand = btn.Text;
-
-            lbl_result.Text = lbl_result.Text + " " + textBox1.Text + " " + newOperand;
-
-            switch (operand)
+            try
             {
-                case "+":textBox1.Text = (result + Double.Parse(textBox1.Text)).ToString();
-                    break;
-                case "-":textBox1.Text = (result - Double.Parse(textBox1.Text)).ToString();
-                    break;
-                case "X":textBox1.Text = (result * Double.Parse(textBox1.Text)).ToString();
-                    break;
-                case "÷":textBox1.Text = (result / Double.Parse(textBox1.Text)).ToString();
-                    break;
-                default:break;
+                operandPerformed = true;
+                Button btn = (Button)sender;
+                string newOperand = btn.Text;
+
+                lbl_result.Text = lbl_result.Text + " " + textBox1.Text + " " + newOperand;
+
+                switch (operand)
+                {
+                    case "+":
+                        textBox1.Text = (result + Double.Parse(textBox1.Text)).ToString();
+                        break;
+                    case "-":
+                        textBox1.Text = (result - Double.Parse(textBox1.Text)).ToString();
+                        break;
+                    case "X":
+                        textBox1.Text = (result * Double.Parse(textBox1.Text)).ToString();
+                        break;
+                    case "÷":
+                        textBox1.Text = (result / Double.Parse(textBox1.Text)).ToString();
+                        break;
+                    default: break;
+                }
+                result = Double.Parse(textBox1.Text);
+                operand = newOperand;
             }
-            result = Double.Parse(textBox1.Text);
-            operand = newOperand;
+            catch
+            {
+                MessageBox.Show("NAN doesn't accept . symbol");
+            }
         }
 
         private void btn_ce_Click(object sender, EventArgs e)
@@ -164,19 +182,31 @@ namespace Calculator_Application
 
         private void btn_square_Click(object sender, EventArgs e)
         {
-            lbl_result.Text = "";
-            lbl_result.Text = lbl_result.Text + "sqr(" + textBox1.Text + ")";
-            textBox1.Text = (Math.Pow(Double.Parse(textBox1.Text), 2)).ToString();
+            try
+            {
+                lbl_result.Text = "";
+                lbl_result.Text = lbl_result.Text + "sqr(" + textBox1.Text + ")";
+                textBox1.Text = (Math.Pow(Double.Parse(textBox1.Text), 2)).ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Nan doesn't acceptable");
+            }
             
         }
 
         private void btn_root_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
                 lbl_result.Text = "";
                 lbl_result.Text = lbl_result.Text + "sqrt(" + textBox1.Text + ")";
                 textBox1.Text = (Math.Sqrt(Double.Parse(textBox1.Text))).ToString();
-            
+            }
+            catch
+            {
+                MessageBox.Show("Nan doesn't acceptable");
+            }
            
         }
 
@@ -188,7 +218,14 @@ namespace Calculator_Application
 
         private void btn_sign_Click(object sender, EventArgs e)
         {
-            textBox1.Text = ((-1) * Double.Parse(textBox1.Text)).ToString();
+            try
+            {
+                textBox1.Text = ((-1) * Double.Parse(textBox1.Text)).ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Nan doesn't acceptable");
+            }
         }
     }
 }
